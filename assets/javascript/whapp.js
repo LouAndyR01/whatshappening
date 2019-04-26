@@ -9,22 +9,52 @@ function SelectCity(inputCity) {
   
   CurrentCity = inputCity;
   
-  // set the Zomato City ID
+  // Find the city in the CityList Array and set needed info
+  
   for (i=0; i<CityList.length;i++){
     if (CityList[i].Name === CurrentCity) {
-      ZomCityID = CityList[i].ZomID;
+      ZomCityID = CityList[i].ZomID;   // set the Zomato City ID
     }  // if
   }  // for 
 
-//     DisplayWeather (CurrentCity);
+  DisplayCityBanner (CurrentCity);
+  DisplayWeather (CurrentCity);
 }  // function SelectCity()
+
+//********************************************************************
+//  function DisplayCityBanner() - 
+//  The purpose of this function is to display the current city
+//  picture and "button" for the CurrentCity global variable
+//********************************************************************
+function DisplayCityBanner(City, Index) {
+
+  // display the city button image  
+
+  var CityLogoDiv = $("#logo");
+  var CityPicStr = "assets/images/"+ City+".png";
+  if (City === "Dallas")  /* this one has a different picture type */
+     CityPicStr = "assets/images/"+ City+".jpg";
+  var BackgroundStr = "url('" + CityPicStr + "')";
+
+  if (DebugOn) console.log ("In DisplayCityBanner logo is:" + "assets/images/"+ City+"Logo.png");
+  if (DebugOn) console.log ("In DisplayCityBanner background is:" + BackgroundStr);
+  
+  CityLogoDiv.attr("src", "assets/images/"+ City+"Logo.png");
+  $('.jumbotron').css('background-image', BackgroundStr);
+
+  //  Clear the screen when a new city is selected
+  $("#content-area").html("");
+  $("#content-area").css('img', "url('assets/images/image002.png')");
+  
+ }  // function DisplayCityBanner()
+ 
 
 //********************************************************************
 //  function DisplayWeather() - 
 //  The purpose of this function is to display the current weather
 //  widget for the CurrentCity global variable
 //********************************************************************
-function DisplayWeather() {
+function DisplayWeather(City, Index) {
 
   var WeatherWidgetDiv = $("<div>");
 
@@ -375,6 +405,7 @@ function GetCitiesFromDB() {
           //  Create the City DropDown list
           CreateCityDropdown();
       });  // query 
+
 }  // GetCitiesFromDB()
 
 //********************************************************************
@@ -472,8 +503,11 @@ $("#submitBtn").on("click", function(event) {
 //  The purpose of this function is to invoke the Newsletter signup
 //  modal popup box.
 //********************************************************************
-$("#newsBtn").click(function(){
+$("#myBtn").click(function(){
   
+  // Clear the display area
+
+
   // Clear the form fields and user message area
   document.getElementById("usrForm").reset();
   $("#usrMsg").text("");
@@ -486,5 +520,42 @@ $("#newsBtn").click(function(){
 
 });  //  $("#newsBtn").click(function()
 
+// Get the modal
+var modal = document.getElementById('NewsModal');
+
+// Get the button that opens the modal
+var Newsbtn = document.getElementById("newsBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+Newsbtn.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
 
 });  // $(document.body).ready(function()
+
+
+!function(d,s,id){
+  var js,fjs=d.getElementsByTagName(s)[0];
+  if(!d.getElementById(id)){
+    js=d.createElement(s);
+    js.id=id;
+    js.src='https://weatherwidget.io/js/widget.min.js';
+    fjs.parentNode.insertBefore(js,fjs);
+  }
+}(document,'script','weatherwidget-io-js');
