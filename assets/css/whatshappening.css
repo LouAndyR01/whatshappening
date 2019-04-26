@@ -34,7 +34,9 @@ body {
 
 
 #content-area {
-    background-color: lightgray;
+    background: url("../images/WhiteWaves.png");
+
+    background-color: ;
     width: 850px;
     max-height: 1000px;
     margin-top: 0px;
@@ -54,7 +56,7 @@ body {
 #ticket-fpo {
     max-width: 103%;
     max-height: 100%;
-}
+} 
 
 #topicButtonsBanner {
     padding: 15px;
@@ -172,13 +174,14 @@ body {
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
   }
   
-  /* Modal Content */
+    /* Modal Content */
   .modal-content {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    font-size: 15px;
   }
   
   /* The Close Button */

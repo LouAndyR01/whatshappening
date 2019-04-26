@@ -44,7 +44,7 @@ function DisplayCityBanner(City, Index) {
 
   //  Clear the screen when a new city is selected
   $("#content-area").html("");
-  $("#content-area").css('img', "url('assets/images/image002.png')");
+  $("#content-area").css("src", "url('assets/images/image002.png')");
   
  }  // function DisplayCityBanner()
  
