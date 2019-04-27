@@ -4,6 +4,7 @@ body {
 }
 
 .jumbotron {
+    background-size: cover;
     background-image: url("../images/Dallas.jpg");
     margin: auto;
     max-height:200px;
@@ -35,8 +36,6 @@ body {
 
 #content-area {
     background: url("../images/WhiteWaves.png");
-
-    background-color: ;
     width: 850px;
     max-height: 1000px;
     margin-top: 0px;

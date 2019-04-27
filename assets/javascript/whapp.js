@@ -18,7 +18,7 @@ function SelectCity(inputCity) {
   }  // for 
 
   DisplayCityBanner (CurrentCity);
-  DisplayWeather (CurrentCity);
+//  DisplayWeather (CurrentCity);
 }  // function SelectCity()
 
 //********************************************************************
@@ -58,13 +58,7 @@ function DisplayWeather(City, Index) {
 
   var WeatherWidgetDiv = $("<div>");
 
-  // create a pointer of type <img> 
-  var WeatherImage = $("<img>");
-  WeatherImage.attr("src", "https://w.bookcdn.com/weather/picture/1_26868_0_1_137AE9_200_ffffff_333333_08488D_1_ffffff_333333_0_6.png?scode=2&domid=w209&anc_id=58942" );
-  WeatherWidgetDiv.append(WeatherImage);
     
-  // append the weather widget <div> pointer to the screen
-  $("#WeatherWidgetHere").append(WeatherWidgetDiv);
  }  // function DisplayWeather()
  
 //********************************************************************
@@ -402,6 +396,10 @@ function GetCitiesFromDB() {
               CityList.push(City);
           });   // snapshot 
 
+          // Make sure the CityList populated correctly from database
+          if (CityList.length === 0) {  // did not populate correctly;
+            CityList = DefaulCityList;
+          }
           //  Create the City DropDown list
           CreateCityDropdown();
       });  // query 
@@ -507,7 +505,6 @@ $("#myBtn").click(function(){
   
   // Clear the display area
 
-
   // Clear the form fields and user message area
   document.getElementById("usrForm").reset();
   $("#usrMsg").text("");
@@ -546,16 +543,4 @@ window.onclick = function(event) {
   }
 }
 
-
 });  // $(document.body).ready(function()
-
-
-!function(d,s,id){
-  var js,fjs=d.getElementsByTagName(s)[0];
-  if(!d.getElementById(id)){
-    js=d.createElement(s);
-    js.id=id;
-    js.src='https://weatherwidget.io/js/widget.min.js';
-    fjs.parentNode.insertBefore(js,fjs);
-  }
-}(document,'script','weatherwidget-io-js');
