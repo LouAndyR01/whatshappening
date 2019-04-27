@@ -45,6 +45,18 @@ var City = {
     ZomID: ""
 };
 
+var DefaultCityList = [
+    {Name: "Dallas",
+     ZomId: "276"},
+     {Name: "Houson",
+     ZomId: "277"},
+     {Name: "New York",
+     ZomId: "280"},
+     {Name: "Chicago",
+     ZomId: "292"},
+     {Name: "Los Angeles",
+     ZomId: "281"}
+];
 
 
 
