@@ -46,7 +46,7 @@ What's Happening is a software application that works as a one-stop-shop for all
 - Stackpath Boostrap used
     - yes!
 
-- Diployed on Github at https://shingaki.github.io/whatshappening/
+- Deployed on Github at https://shingaki.github.io/whatshappening/
 
 - User Input Validation
     - The Newsletter Signup page verifies that the user inputs a name and a valid email address before being allowed to submit.
@@ -58,7 +58,7 @@ What's Happening is a software application that works as a one-stop-shop for all
   - of course!
 
 ## Problems/issues
-- The Yelp API required the use of a proxy.  This took a while to figure out,  and were able to make it work.
+- The Yelp API required the use of a proxy.  This took a while to figure out,  and we were able to make it work.
 - We planned to store the submitted user data from the Newsletter Page, but Firebase only allows one database to be open per program on their "free" platform.
 - We could not get the Weather widget to update when a new city was selected.  One more day and we would have had it working!
 
