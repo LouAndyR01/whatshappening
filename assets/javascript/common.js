@@ -48,7 +48,7 @@ var City = {
 var DefaultCityList = [
     {Name: "Dallas",
      ZomId: "276"},
-     {Name: "Houson",
+     {Name: "Houston",
      ZomId: "277"},
      {Name: "New York",
      ZomId: "280"},
