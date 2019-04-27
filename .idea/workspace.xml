@@ -12,9 +12,13 @@
     <leaf>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
+<<<<<<< HEAD
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-340" />
           </provider>
+=======
+          <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> origin/master
         </entry>
       </file>
     </leaf>
@@ -95,12 +99,20 @@
       <updated>1556244831903</updated>
       <workItem from="1556244833163" duration="148000" />
       <workItem from="1556326616219" duration="185000" />
+<<<<<<< HEAD
       <workItem from="1556326949896" duration="804000" />
+=======
+      <workItem from="1556326949896" duration="554000" />
+>>>>>>> origin/master
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="1137000" />
+=======
+    <option name="totallyTimeSpent" value="887000" />
+>>>>>>> origin/master
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -140,9 +152,13 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
+<<<<<<< HEAD
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-340" />
       </provider>
+=======
+      <provider selected="true" editor-type-id="text-editor" />
+>>>>>>> origin/master
     </entry>
   </component>
   <component name="masterDetails">
